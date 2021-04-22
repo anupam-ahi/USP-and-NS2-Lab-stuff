@@ -1,7 +1,7 @@
 set ns [ new Simulator]
-set tf [ open lab1.tr w] 
+set tf [ open lab2.tr w] 
 $ns trace-all $tf
-set nf [ open lab1.nam w] 
+set nf [ open lab2.nam w] 
 $ns namtrace-all $nf
 
 # Create nodes. 
@@ -75,7 +75,7 @@ proc finish { } {
 
 global ns nf tf 
 $ns flush-trace
-exec nam lab1.nam & 
+exec nam lab2.nam & 
 close $tf
 close $nf 
 exit 0
